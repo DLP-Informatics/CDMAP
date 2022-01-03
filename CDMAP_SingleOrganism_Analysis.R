@@ -49,7 +49,7 @@ VcfOrBaseCall <- readline("Do you have a VCF file or a Mutation Base Call file?"
 #/Users/triadge/Desktop/CDMAP_Release_v1/CDMAP_Library
 
 #Section 1: intaking the data
-DirCheck <- readline("Do you use Default or Customized Directories for CDMAP?")
+DirCheck <- "Default" #readline("Do you use Default or Customized Directories for CDMAP?")
 DefaultCheck <- c("Default", "default", "Def", "def")
 CustomCheck <- c("Custom", "custom", "Customized", "customized")
 MasterCheck <- c("Triadge", "triadge")
@@ -105,37 +105,37 @@ if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
 
 }
 
-if(any(grepl(DirCheck, CustomCheck, ignore.case = TRUE)))
-{
-  Path_home <- paste("/Users/", Sys.info()[["user"]], "/", sep = "")
-  Path_MainRepo <- paste(Path_home, Path_MainRepo, sep ="")
-  Path_to_scripts <- readline("Where is your CDMAP Library Located?")
-  Path_wd <- readline("What is your Working Directory?")
-  Path_output <- readline("Where do you want to output your data?")
-  Path_RefFile <- readline("What is your reference sequence? (please provide the full Path)")
-  Path_GBFile <- readline("What is your Genbank file? (please provide the full Path)")
-  Path_correlate_repo <- readline("Where would you like to store multi-organism output?")
-  
-  if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
-  {
-    Path_InFile <- readline("What is your VCF File? (please provide the full Path)")
-  }
-  if(any(grepl(VcfOrBaseCall, BaseCheck, ignore.case = TRUE)))
-  {
-    Path_InFile <- readline("What is your Base Call File? (please provide the full Path)")
-  }
-
-  
-  Path_output_organism <- paste(Path_output, "/", organism, "/", sep = "")
-  Path_output_triplet <- paste(Path_output_organism, "Triplet", sep = "")
-  Path_output_upstream <- paste(Path_output_organism, "Upstream", sep = "")
-  Path_output_downstream <- paste(Path_output_organism, "Downstream", sep = "")
-  
-  Path_correlate_triplet  <- paste(Path_correlate_repo, "triplet", sep = "/")
-  Path_correlate_repo_down  <- paste(Path_correlate_repo, "Downstream", sep = "/")
-  Path_correlate_repo_up  <- paste(Path_correlate_repo, "Upstream", sep = "/")
-  
- }
+# if(any(grepl(DirCheck, CustomCheck, ignore.case = TRUE)))
+# {
+#   Path_home <- paste("/Users/", Sys.info()[["user"]], "/", sep = "")
+#   Path_MainRepo <- paste(Path_home, Path_MainRepo, sep ="")
+#   Path_to_scripts <- readline("Where is your CDMAP Library Located?")
+#   Path_wd <- readline("What is your Working Directory?")
+#   Path_output <- readline("Where do you want to output your data?")
+#   Path_RefFile <- readline("What is your reference sequence? (please provide the full Path)")
+#   Path_GBFile <- readline("What is your Genbank file? (please provide the full Path)")
+#   Path_correlate_repo <- readline("Where would you like to store multi-organism output?")
+#   
+#   if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
+#   {
+#     Path_InFile <- readline("What is your VCF File? (please provide the full Path)")
+#   }
+#   if(any(grepl(VcfOrBaseCall, BaseCheck, ignore.case = TRUE)))
+#   {
+#     Path_InFile <- readline("What is your Base Call File? (please provide the full Path)")
+#   }
+# 
+#   
+#   Path_output_organism <- paste(Path_output, "/", organism, "/", sep = "")
+#   Path_output_triplet <- paste(Path_output_organism, "Triplet", sep = "")
+#   Path_output_upstream <- paste(Path_output_organism, "Upstream", sep = "")
+#   Path_output_downstream <- paste(Path_output_organism, "Downstream", sep = "")
+#   
+#   Path_correlate_triplet  <- paste(Path_correlate_repo, "triplet", sep = "/")
+#   Path_correlate_repo_down  <- paste(Path_correlate_repo, "Downstream", sep = "/")
+#   Path_correlate_repo_up  <- paste(Path_correlate_repo, "Upstream", sep = "/")
+#   
+#  }
 
 
 
