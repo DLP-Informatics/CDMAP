@@ -1,0 +1,7 @@
+path_wd <- "/Desktop/Sung_Lab/testdir"
+path_to_scripts <- "/Desktop/Sung_Lab/R_workspace/Context_Project/Context_Pipeline_0.1.0"
+path_output <- "/Desktop/CDMAP/Test_Datasets/output"
+Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/Ecoli/MMR/U00096.fasta"
+Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/Ecoli/MMR/U00096.gbk"
+Path_InFile <- "/Desktop/CDMAP/Test_Datasets/Ecoli/MMR/Basecalls.csv"
+Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/Ecoli/MMR/U00096.fasta"

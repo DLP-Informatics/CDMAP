@@ -1,0 +1,12 @@
+
+  Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/bacillus/Bacillus_3610.fasta"
+  Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/bacillus/NC000964.gbk"
+  Path_InFile <-"/Desktop/CDMAP/Test_Datasets/bacillus/Bacillus_MMR.csv"
+  Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/bacillus/Bacillus_3610.fasta"
+
+Output_DataVerifyReport:
+
+path_output <- “/Desktop/Sung_Lab/testdir/output"
+Path_MyLeft <- "/Desktop/Sung_Lab/testdir/output/Left_Context_Core_full.csv"
+Path_MyRight <- "/Desktop/Sung_Lab/testdir/output/Right_Context_Core_full.csv"
+path_refseq <- "/Desktop/Sung_Lab/testdir/bacillus/Bacillus_3610.fasta"
