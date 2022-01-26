@@ -66,12 +66,14 @@ if(i > length(GC_arr))
  nameobj3 <- nameobj2[3:length(nameobj2)]
 
  name1 <- nameobj2[1] #first part of first name
- namesplit1 <- unlist(strsplit(name1, "")) #split the first name into character vector
- namechar1 <- namesplit1[1] #the desired first letter of first name
+ name1 <- as.character(name1)
+ namesplit1 <- strsplit(name1, "") #split the first name into character vector
+ namechar1 <- unlist(namesplit1)[1] #the desired first letter of first name
 
  name2 <- nameobj2[2] #first part of first name
- namesplit2 <- unlist(strsplit(name2, "")) #split the first name into character vector
- namechar2 <- namesplit2[1] #the desired first letter of first name
+ name2 <- as.character(name2)
+ namesplit2 <-strsplit(name2, "") #split the first name into character vector
+ namechar2 <- unlist(namesplit2)[1] #the desired first letter of first name
  
  name_abbrev <- paste(namechar1, tolower(namechar2), sep = "")
  name_abbrev_array <- c(name_abbrev_array, name_abbrev)

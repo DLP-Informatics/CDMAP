@@ -16,6 +16,17 @@ if(!(dir.exists(Path_output)))
   dir.create(Path_output) #creates the base level output directory for all organisms
 }
 
+if(!(dir.exists(Path_repoGC)))
+{
+  dir.create(Path_repoGC)
+}
+
+if(!(dir.exists(Path_repoFASTA)))
+{
+  dir.create(Path_repoFASTA)
+}
+
+
 if(!(dir.exists(Path_output_organism)))
 {
   dir.create(Path_output_organism) #creates the organism specific directory in the base directory
