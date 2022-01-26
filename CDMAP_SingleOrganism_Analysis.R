@@ -204,13 +204,41 @@ if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
   #featend <- as.numeric(matobj[1,3]) #end of replication origin region
 #}
 
-ori_ref <- oriloc(gbk = Path_GBFile) #this generates the oriloc data, this is a test variable
-ori_pos <- which.max(ori_ref$skew) # find the position of the origin of replication
-ori_bp <- ori_pos*1000   #base pair position of the origin of replication
-ori_value <- ori_ref$skew[ori_pos] #value of the origination position
-term_pos <- which.min(ori_ref$skew) #find the position of the terminus of replication
-term_value <- ori_ref$skew[term_pos] #value of the terminii
-term_bp <- term_pos*1000 #base pair position of the terminus of replication
+oriflag <- readline("do you wish to automatically determine the replication origin or manually designate it? (reply auto or manual)")
+
+oriauto <- c("AUTO", "auto", "Auto")
+orimanual <- c("Manual", "manual", "MANUAL")
+
+if(any(grepl(oriflag, oriauto, ignore.case = TRUE)))
+{
+  ori_ref <- oriloc(gbk = Path_GBFile) #this generates the oriloc data, this is a test variable
+  ori_pos <- which.max(ori_ref$skew) # find the position of the origin of replication
+  ori_bp <- ori_pos*1000   #base pair position of the origin of replication
+  ori_value <- ori_ref$skew[ori_pos] #value of the origination position
+  term_pos <- which.min(ori_ref$skew) #find the position of the terminus of replication
+  term_value <- ori_ref$skew[term_pos] #value of the terminii
+  term_bp <- term_pos*1000 #base pair position of the terminus of replication
+}
+
+if(any(grepl(oriflag, orimanual, ignore.case = TRUE)))
+{
+  ori_ref <- readline("What is the base pair (BP) position of your replication origin?")
+  ori_ref <- as.numeric(ori_ref)
+  ori_pos <- ori_ref
+  ori_bp <- ori_ref
+  replength <- (len_refseq/2)
+  term <- ori_bp+replength
+  if(term <= len_refseq)
+    {
+    term_pos <- term
+    term_bp <- term
+    }
+  if(term > len_refseq)
+  {
+    term_pos <- term - len_refseq
+    term_bp <- term - len_refseq
+  }
+}
 
 #generates a dummy indices vector based on the length of the reference sequence
 RefSeq_inds <<- c()
