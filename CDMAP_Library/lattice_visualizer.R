@@ -12,13 +12,13 @@ dlin <- linspace(min(d), max(d), n = 20) #this serves as the key scale for the h
 dlin <- round(dlin, digits = 3)
 ## FIGURE OUT HOW TO MANUALLY CREATE THE NUMERIC SCALE IN LATTICE##
 setwd(Path_image_output)
-png(output_pic_name, width = 800, height = 600, units = "px")
+png(output_pic_name, width = 600, height = 800, units = "px")
 rgb.palette <- colorRampPalette(c("white", "blue"), space = "Lab")
-heatplot <- levelplot(d, col.regions=rgb.palette, scales=list(x=list(rot=90)),
-                      xlab = "", ylab = "", main = matrix_name_graph,
+heatplot <- levelplot(d, col.regions=rgb.palette, scales=list(x=list(rot=90), cex = 1.5),
+                      xlab = "", ylab = "", main = list(label = matrix_name_graph, cex = 1.5),
                       aspect="fill",
                       colorkey=list(at=as.numeric(factor(c(seq(dlin)))),
-                                    labels=as.character(dlin),
+                                    labels= list(cex = 2, as.character(dlin)),
                                     col=(rgb.palette)))
 
 print(heatplot)

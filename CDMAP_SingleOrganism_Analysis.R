@@ -35,65 +35,44 @@ LibDir <- paste("/Users/", username, "/Desktop/CDMAP/CDMAP_Library", sep = "")
 #========================================#
 
 
-
+#args <- commandArgs(trailingOnly = TRUE)
 
 
 ### USER INPUT OF REQUIRED FILES, MA INFORMATION AND POINTERS FOR OUTPUT DIRECTORIES ###
 #========================================#
 #name of the organism for file naming purposes
-organism <- readline("What is the name of the organism (and chromosome number)?")
-BaseCheck <- c("basecall", "base call", "Base call","Base Call", "Basecall")
-VCFCheck <- c("vcf", "Vcf", "VCF")
-VcfOrBaseCall <- readline("Do you have a VCF file or a Mutation Base Call file?")
 
+  cat("What is the name of the organism (and chromosome number)?")
+  organism <- readLines(con = "stdin", n = 1)
+  
+  #organism <- readline(prompt = "What is the name of the organism (and chromosome number)?")
+  BaseCheck <- c("basecall", "base call", "Base call","Base Call", "Basecall")
+  VCFCheck <- c("vcf", "Vcf", "VCF")
+  #VcfOrBaseCall <- readline(prompt = "Do you have a VCF file or a Mutation Base Call file?")
+  cat("Do you have a VCF file or a Mutation Base Call file?")
+  VcfOrBaseCall <- readLines(con = "stdin", n = 1)
+  
 #/Users/triadge/Desktop/CDMAP_Release_v1/CDMAP_Library
 
 #Section 1: intaking the data
-DirCheck <- "Default" #readline("Do you use Default or Customized Directories for CDMAP?")
-DefaultCheck <- c("Default", "default", "Def", "def")
-CustomCheck <- c("Custom", "custom", "Customized", "customized")
-MasterCheck <- c("Triadge", "triadge")
+  DirCheck <- "Default" #readline("Do you use Default or Customized Directories for CDMAP?")
+  DefaultCheck <- c("Default", "default", "Def", "def")
+  CustomCheck <- c("Custom", "custom", "Customized", "customized")
+  MasterCheck <- c("Triadge", "triadge")
 
 
-Path_to_scripts <- "/Desktop/CDMAP/CDMAP_Library"
+  Path_to_scripts <- "/Desktop/CDMAP/CDMAP_Library"
 
-#Directory Dependencies
-Path_MainRepo <- "/Desktop/CDMAP_Output/"
-Path_output <- "/Desktop/CDMAP_Output/Output_Directory"
-Path_output_organism <- paste(Path_output, "/", organism, sep = "")
-Path_correlate_repo <- "/Desktop/CDMAP_Output/Correlation_Repository"
-correlate_repoGC <- "Desktop/CDMAP_Output/GC_Directory"
-
-#4fold mutation debug directories
-Path_output_organism <- paste(Path_output, "/", organism, "/", sep = "")
-Path_output_triplet <- paste(Path_output_organism, "Triplet", sep = "")
-Path_output_upstream <- paste(Path_output_organism, "Upstream", sep = "")
-Path_output_downstream <- paste(Path_output_organism, "Downstream", sep = "")
-
-Path_correlate_triplet  <- paste(Path_correlate_repo, "triplet", sep = "/")
-Path_correlate_repo_down  <- paste(Path_correlate_repo, "Downstream", sep = "/")
-Path_correlate_repo_up  <- paste(Path_correlate_repo, "Upstream", sep = "/")
+  #Directory Dependencies
+  Path_MainRepo <- "/Desktop/CDMAP_Output/"
+  Path_output <- "/Desktop/CDMAP_Output/Output_Directory"
+  Path_output_organism <- paste(Path_output, "/", organism, sep = "")
+  Path_correlate_repo <- "/Desktop/CDMAP_Output/Correlation_Repository"
+  repoGC <- paste(Path_MainRepo, "GC_Directory", sep = "")
+  repoFASTA <- paste(repoGC, "/FASTA", sep = "")
 
 
-if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
-{
-  Path_home <- paste("/Users/", Sys.info()[["user"]], sep = "")
-  Path_MainRepo <- paste(Path_home, Path_MainRepo, sep ="")
-  Path_to_scripts <- LibDir
-  Path_wd <- MainDir
-  Path_output <- paste(User, Path_output, sep = "")
-  Path_correlate_repo <- paste(User, Path_correlate_repo, sep = "")
-  Path_RefFile <- readline("What is your reference sequence? (please provide the full Path)")
-  Path_GBFile <- readline("What is your Genbank file? (please provide the full Path)")
-  if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
-  {
-    Path_InFile <- readline("What is your VCF File? (please provide the full Path)")
-  }
-  if(any(grepl(VcfOrBaseCall, BaseCheck, ignore.case = TRUE)))
-  {
-    Path_InFile <- readline("What is your Base Call File? (please provide the full Path)")
-  }
-
+  #4fold mutation debug directories
   Path_output_organism <- paste(Path_output, "/", organism, "/", sep = "")
   Path_output_triplet <- paste(Path_output_organism, "Triplet", sep = "")
   Path_output_upstream <- paste(Path_output_organism, "Upstream", sep = "")
@@ -103,7 +82,44 @@ if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
   Path_correlate_repo_down  <- paste(Path_correlate_repo, "Downstream", sep = "/")
   Path_correlate_repo_up  <- paste(Path_correlate_repo, "Upstream", sep = "/")
 
-}
+
+  if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
+  {
+    Path_home <- paste("/Users/", Sys.info()[["user"]], sep = "")
+    Path_MainRepo <- paste(Path_home, Path_MainRepo, sep ="")
+    Path_to_scripts <- LibDir
+    Path_wd <- MainDir
+    Path_output <- paste(User, Path_output, sep = "")
+    Path_correlate_repo <- paste(User, Path_correlate_repo, sep = "")
+    Path_repoGC <- paste(User, repoGC, sep = "")
+    Path_repoFASTA <- paste(User, repoFASTA, sep = "")
+    
+    cat("What is your reference sequence? (please provide the full Path)")
+    Path_RefFile <- readLines(con = "stdin", n = 1)
+    
+    cat("What is your Genbank file? (please provide the full Path)")
+    Path_GBFile <- readLines(con = "stdin", n = 1)
+    
+    if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
+    {
+      cat("What is your VCF File? (please provide the full Path)")
+      Path_InFile <- readLines(con = "stdin", n = 1)
+    }
+    if(any(grepl(VcfOrBaseCall, BaseCheck, ignore.case = TRUE)))
+    {
+      cat("What is your Base Call File? (please provide the full Path)")
+      Path_InFile <- readLines(con = "stdin", n = 1)
+    }
+
+    Path_output_organism <- paste(Path_output, "/", organism, "/", sep = "")
+    Path_output_triplet <- paste(Path_output_organism, "Triplet", sep = "")
+    Path_output_upstream <- paste(Path_output_organism, "Upstream", sep = "")
+    Path_output_downstream <- paste(Path_output_organism, "Downstream", sep = "")
+
+    Path_correlate_triplet  <- paste(Path_correlate_repo, "triplet", sep = "/")
+    Path_correlate_repo_down  <- paste(Path_correlate_repo, "Downstream", sep = "/")
+    Path_correlate_repo_up  <- paste(Path_correlate_repo, "Upstream", sep = "/")
+  }
 
 # if(any(grepl(DirCheck, CustomCheck, ignore.case = TRUE)))
 # {
@@ -138,13 +154,17 @@ if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
 #  }
 
 
+cat("How many generations did you carry out your experiment? ")
+generations <- readLines(con ="stdin", n = 1)
+cat("How many Mutation Accumulation Lines were run during your experiment? ")
+malines <- readLines(con = "stdin", n= 1)
 
-generations <- readline("How many generations did you carry out your experiment? ")
-malines <- readline("How many Mutation Accumulation Lines were run during your experiment? ")
 malines <- as.numeric(malines)
 generations <- as.numeric(generations)
-param_flag <- readline("How would you like to scale your output data for the mutation counts, triplets, and mutation rates? 
+
+cat("How would you like to scale your output data for the mutation counts, triplets, and mutation rates? 
          (0 for default, 1 for scaling to the average mean, or 2, for custom parameters): ")
+param_flag <- readLines(con = "stdin", n =1)
 
 setwd(Path_to_scripts)
 source("createDirectories.r") #CREATE ALL PREREQUISITE DIRECTORIES FOR OUTPUT
@@ -204,13 +224,43 @@ if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
   #featend <- as.numeric(matobj[1,3]) #end of replication origin region
 #}
 
-ori_ref <- oriloc(gbk = Path_GBFile) #this generates the oriloc data, this is a test variable
-ori_pos <- which.max(ori_ref$skew) # find the position of the origin of replication
-ori_bp <- ori_pos*1000   #base pair position of the origin of replication
-ori_value <- ori_ref$skew[ori_pos] #value of the origination position
-term_pos <- which.min(ori_ref$skew) #find the position of the terminus of replication
-term_value <- ori_ref$skew[term_pos] #value of the terminii
-term_bp <- term_pos*1000 #base pair position of the terminus of replication
+cat("do you wish to automatically determine the replication origin or manually designate it? (reply auto or manual)")
+oriflag <- readLines(con = "stdin", n= 1)
+
+oriauto <- c("AUTO", "auto", "Auto")
+orimanual <- c("Manual", "manual", "MANUAL")
+
+if(any(grepl(oriflag, oriauto, ignore.case = TRUE)))
+{
+  ori_ref <- oriloc(gbk = Path_GBFile) #this generates the oriloc data, this is a test variable
+  ori_pos <- which.max(ori_ref$skew) # find the position of the origin of replication
+  ori_bp <- ori_pos*1000   #base pair position of the origin of replication
+  ori_value <- ori_ref$skew[ori_pos] #value of the origination position
+  term_pos <- which.min(ori_ref$skew) #find the position of the terminus of replication
+  term_value <- ori_ref$skew[term_pos] #value of the terminii
+  term_bp <- term_pos*1000 #base pair position of the terminus of replication
+}
+
+if(any(grepl(oriflag, orimanual, ignore.case = TRUE)))
+{
+  cat("What is the base pair (BP) position of your replication origin?")
+  ori_ref <- readLines(con = "stdin", n = 1)
+  ori_ref <- as.numeric(ori_ref)
+  ori_pos <- ori_ref
+  ori_bp <- ori_ref
+  replength <- (len_refseq/2)
+  term <- ori_bp+replength
+  if(term <= len_refseq)
+    {
+    term_pos <- term
+    term_bp <- term
+    }
+  if(term > len_refseq)
+  {
+    term_pos <- term - len_refseq
+    term_bp <- term - len_refseq
+  }
+}
 
 #generates a dummy indices vector based on the length of the reference sequence
 RefSeq_inds <<- c()
@@ -536,6 +586,12 @@ setwd(Path_to_scripts)
 source("Context_Data_Visualization.R")
 setwd(Path_to_scripts)
 ## =================== ##
+
+setwd(Path_repoGC)
+fastafile <- paste(organism, "_CDMAP.csv", sep = "")
+seqinr::write.fasta(RefFile, organism, fastafile)
+
+setwd(Path_to_scripts)
 CodingRegionPercent <- CodingRegionSize/len_refseq
 CodonGCcontent <- GC_counter/CodingRegionSize
 CodonGCcontent <- CodonGCcontent * 100
