@@ -1,0 +1,17 @@
+Context_Pipeline_Basecall:
+
+path_wd <- "/Desktop/Sung_Lab/testdir"
+path_to_scripts <- "/Desktop/Sung_Lab/R_workspace/Context_Project/Context_Pipeline_0.1.0"
+path_output <- "/Desktop/CDMAP/Test_Datasets/output"
+
+Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/Ruegeria_pomeroyi_DSS_3/chr1/CP000031.fasta"
+Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/Ruegeria_pomeroyi_DSS_3/chr1/CP000031.gbk"
+Path_InFile <-"/Desktop/CDMAP/Test_Datasets/Ruegeria_pomeroyi_DSS_3/chr1/Ruegeria_Basecalls.csv"
+Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/Ruegeria_pomeroyi_DSS_3/chr1/CP000031.fasta"
+
+Output_DataVerifyReport:
+
+path_output <- “/Desktop/CDMAP/Test_Datasets/output"
+Path_MyLeft <- "/Desktop/CDMAP/Test_Datasets/output/Left_Context_Core_full.csv"
+Path_MyRight <- "/Desktop/CDMAP/Test_Datasets/output/Right_Context_Core_full.csv"
+path_refseq <- "/Desktop/CDMAP/Test_Datasets/Ruegeria_pomeroyi_DSS_3/chr1"

@@ -1,0 +1,14 @@
+Context_Pipeline_Basecall:
+
+
+Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/Agrobacterium_Tumefaciens_C58/chr_circular/sequence.fasta"
+Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/Agrobacterium_Tumefaciens_C58/chr_circular/sequence.gbk"
+Path_InFile <-"/Desktop/CDMAP/Test_Datasets/Agrobacterium_Tumefaciens_C58/chr_circular/BaseCalls.csv"
+Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/Agrobacterium_Tumefaciens_C58/chr_circular/sequence.fasta"
+
+Output_DataVerifyReport:
+
+path_output <- “/Desktop/CDMAP/Test_Datasets/output"
+Path_MyLeft <- "/Desktop/CDMAP/Test_Datasets/output/Left_Context_Core_full.csv"
+Path_MyRight <- "/Desktop/CDMAP/Test_Datasets/output/Right_Context_Core_full.csv"
+path_refseq <- "/Desktop/CDMAP/Test_Datasets/Agrobacterium_Tumefaciens_C58/Agrobacterium_Tumefaciens_C58_3610.fasta"

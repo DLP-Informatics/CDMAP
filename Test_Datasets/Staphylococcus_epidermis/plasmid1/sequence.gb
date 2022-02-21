@@ -1,0 +1,164 @@
+LOCUS       AE015930                4439 bp    DNA     circular BCT 24-JUL-2016
+DEFINITION  Staphylococcus epidermidis ATCC 12228 plasmid pSE-12228-01,
+            complete sequence.
+ACCESSION   AE015930
+VERSION     AE015930.1
+DBLINK      BioProject: PRJNA279
+            BioSample: SAMN02603126
+KEYWORDS    .
+SOURCE      Staphylococcus epidermidis ATCC 12228
+  ORGANISM  Staphylococcus epidermidis ATCC 12228
+            Bacteria; Firmicutes; Bacilli; Bacillales; Staphylococcaceae;
+            Staphylococcus.
+REFERENCE   1  (bases 1 to 4439)
+  AUTHORS   Zhang,Y.Q., Ren,S.X., Li,H.L., Wang,Y.X., Fu,G., Yang,J., Qin,Z.Q.,
+            Miao,Y.G., Wang,W.Y., Chen,R.S., Shen,Y., Chen,Z., Yuan,Z.H.,
+            Zhao,G.P., Qu,D., Danchin,A. and Wen,Y.M.
+  TITLE     Genome-based analysis of virulence genes in a non-biofilm-forming
+            Staphylococcus epidermidis strain (ATCC 12228)
+  JOURNAL   Mol. Microbiol. 49 (6), 1577-1593 (2003)
+   PUBMED   12950922
+REFERENCE   2  (bases 1 to 4439)
+  AUTHORS   Zhang,Y., Ren,S., Li,H., Fu,G., Lu,L., Lu,G., Jia,J., Tu,Y.,
+            Qin,Z., Chen,Z. and Wen,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (05-NOV-2002) Chinese National Human Genome Center at
+            Shanghai, 250 Bi Bo Road, Shanghai 201203, China
+FEATURES             Location/Qualifiers
+     source          1..4439
+                     /organism="Staphylococcus epidermidis ATCC 12228"
+                     /mol_type="genomic DNA"
+                     /strain="ATCC 12228"
+                     /db_xref="ATCC:12228"
+                     /db_xref="taxon:176280"
+                     /plasmid="pSE-12228-01"
+     gene            36..1415
+                     /locus_tag="SE_p101"
+                     /old_locus_tag="p101"
+     CDS             36..1415
+                     /locus_tag="SE_p101"
+                     /old_locus_tag="p101"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="tetracycline resistance protein"
+                     /protein_id="AAO06148.1"
+                     /translation="MFSLYKKFKGLFYSVLFWLCILSFFSVLNEMVLNVSLPDIANHF
+                     NTTPGITNWVNTAYMLTFSIGTAVYGKLSDYINIKKLLIIGISLSCLGSLIAFIGHNH
+                     FFILIFGRLVQGVGSAAFPSLIMVVVARNITRKKQGKAFGFIGSIVALGEGLGPSIGG
+                     IIAHYIHWSYLLILPMITIVTIPFLIKVMVPGKSTKNTLDIVGIVLMSISIICFMLFT
+                     TNYNWTFLILFTIFFVIFIKHISRVSNPFINPKLGKNIPFMLGLFSGGLIFSIVAGFI
+                     SMVPYMMKTIYHVNVATIGNSVIFPGTMSVIVFGYFGGFLVDRKGSLFVFILGSLSIS
+                     ISFLTIAFFVEFSMWLTTFMFIFVMGGLSFTKTVISKIVSSSLSEEEVASGMSLLNFT
+                     SFLSEGTGIAIVGGLLSLQLINRKLVLEFINYSSGVYSNILVAMAILIILCCLLTIIV
+                     FKRSEKQFE"
+     gene            1601..2842
+                     /locus_tag="SE_p102"
+                     /old_locus_tag="p102"
+     CDS             1601..2842
+                     /locus_tag="SE_p102"
+                     /old_locus_tag="p102"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="RepC protein"
+                     /protein_id="AAO06149.1"
+                     /translation="MSYSIVRVSKVKSGTNTTGIQKHVQRENNNYENEDIDHSKTYLN
+                     YDLVNANKQNFNNLIDEKIEQNYTGKRKIRTDAIKHIDGLITSDNDFFDNQTPEDTKQ
+                     FFEYAKEFLEQEYGKDNLLYATVHMDEKTPHMHYGVVPITDDGRLSAKEVVGNKKALT
+                     AFQDRFNEHVKQRGYDLERGQSRQVTNAKHEQISQYKQKTEYHKQEYERESQKTDHIK
+                     QKNDKLMQEYQKSLNTLKKPINVPYEQETEKVGGLFSKEIQETGNVVISQKDFNEFQK
+                     QIKAAQDISEDYEYIKSGRALDDKDKEIREKDDLLNKAVERIENADDNFNQLYENAKP
+                     LKENIEIALKLLKILLKELERVLGRNTFAERVNKLTEDEPKLNGLAGNLDKKMNPELY
+                     SEQEQQQEQQKNQKRDRGMHL"
+     gene            3369..4313
+                     /locus_tag="SE_p103"
+                     /old_locus_tag="p103"
+     CDS             3369..4313
+                     /locus_tag="SE_p103"
+                     /old_locus_tag="p103"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="RepC protein polypeptide A"
+                     /protein_id="AAO06150.1"
+                     /translation="MYKNNHANHSNHLENHDLDNFSKTGYSNSRLDAHTVCISDPKLS
+                     FDAMTIVGNLNRDNAQALSKFMSVEPQIRLWDILQTKFKAKALQEKVYIEYDKVKADS
+                     WDRRNMRIEFNPNKLTRDEMIWLKQNIISYMEDDGFTRLDLAFDFEDDLSDYYAMSDK
+                     AVKKTIFYGRNGKPETKYFGVRDSNRFIRIYNKKQERKDNADAEVMSEHLWRVEIELK
+                     RDMVDYWNDCFSDLHILQPDWKTIQRTADRAIVFMLLSDEEEWGKLHRNSRTKYKNLI
+                     KEISPVDLTDLMKSTLKANEKQLQKQIDFWQHEFKFWK"
+ORIGIN      
+        1 tataaacttt agtcacctca agtaaagagg taaaattgtt tagtttatat aaaaaattta
+       61 aaggtttgtt ttatagcgtt ttattttggc tttgtattct ttcatttttt agtgtattaa
+      121 atgaaatggt tttaaatgtt tctttacctg atattgcaaa tcattttaat actactcctg
+      181 gaattacaaa ctgggtaaac actgcatata tgttaacttt ttcgatagga acagcagtat
+      241 atggaaaatt atctgattat ataaatataa aaaaattgtt aattattggt attagtttga
+      301 gctgtcttgg ttcattgatt gcttttattg gtcacaatca cttttttatt ttgatttttg
+      361 gtaggttagt acaaggagta ggatctgctg cattcccttc actgattatg gtggttgtag
+      421 ctagaaatat tacaagaaaa aaacaaggca aagcctttgg ttttatagga tcaattgtag
+      481 ctttaggtga agggttaggt ccttcaatag ggggaataat agcacattat attcattggt
+      541 cttacctact tatacttcct atgattacaa tagtaactat accttttctt attaaagtaa
+      601 tggtacctgg taaatcaaca aaaaatacat tagatatcgt aggtattgtt ttaatgtcta
+      661 taagtattat atgttttatg ttatttacga caaattataa ttggactttt ttaatactct
+      721 tcacaatctt ttttgtgatt tttattaaac atatttcaag agtttctaac ccttttatta
+      781 atcctaaact agggaaaaac attccgttta tgcttggttt gttttctggt gggctaatat
+      841 tttctatagt agctggtttt atatcaatgg tgccttatat gatgaaaact atttatcatg
+      901 taaatgtagc gacaataggt aatagtgtta tttttcctgg aaccatgagt gttattgttt
+      961 ttggttattt tggtggtttt ttagtggata gaaaaggatc attatttgtt tttattttag
+     1021 gatcattgtc tatctctata agttttttaa ctattgcatt ttttgttgag tttagtatgt
+     1081 ggttgactac ttttatgttt atatttgtta tgggcggatt atcttttact aaaacagtta
+     1141 tatcaaaaat agtatcaagt agtctttctg aagaagaagt tgcttctgga atgagtttgc
+     1201 taaatttcac aagtttttta tcagagggaa caggtatagc aattgtagga ggtttattgt
+     1261 cactacaatt gattaatcgt aaactagttc tggaatttat aaattattct tctggagtgt
+     1321 atagtaatat tcttgtagcc atggctatcc ttattatttt atgttgtctt ttgacgatta
+     1381 ttgtatttaa acgttctgaa aagcagtttg aatagttata ttatattttg gtttagaact
+     1441 atgagtggct agcattttgc cactcatttt ttgcgttagc aaaaacaggt ttaagcctcg
+     1501 cagagcacac gtattaacga cttattaaaa ataagtctag tgtgttagac ttaaactatt
+     1561 aaatacacat gaaacctttg tgcttaggag tgatttttat atgtcttatt ccattgttag
+     1621 agtttcaaaa gttaaatctg gaacaaatac aacgggcata caaaaacatg ttcaaagaga
+     1681 aaataataat tatgaaaatg aagatataga ccatagtaaa acttacttaa attatgattt
+     1741 ggtaaatgct aataaacaga attttaataa cttgattgat gaaaaaatcg aacagaatta
+     1801 tacaggcaaa agaaaaatta gaacagacgc gattaaacac attgatggtt taattacatc
+     1861 agacaatgat ttctttgata atcaaacgcc agaagataca aagcagtttt ttgaatatgc
+     1921 taaagagttt ttagaacaag aatacggtaa agataattta ttatatgcaa cagttcacat
+     1981 ggacgaaaaa acaccacata tgcattatgg cgttgttcca ataactgatg atggtcgttt
+     2041 aagtgctaaa gaagttgtag gtaataaaaa agctttaaca gcgtttcaag atagatttaa
+     2101 tgagcatgtt aaacaacgag gatatgattt agaacgtggg caatcaagac aagtaacaaa
+     2161 tgctaaacat gagcaaataa gtcagtataa acaaaaaaca gaatatcata agcaagaata
+     2221 tgaacgtgag agccaaaaaa cagaccatat aaagcaaaag aacgataaat taatgcaaga
+     2281 gtaccaaaaa tcgttaaata cgcttaaaaa gcctataaat gttccgtatg agcaagaaac
+     2341 tgaaaaagta ggtggtttat ttagcaaaga aatacaagaa actggaaatg ttgtaataag
+     2401 ccaaaaagat ttcaatgaat ttcagaaaca gataaaagct gctcaagata tttcggaaga
+     2461 ttacgagtat ataaagtctg gtagagcctt agatgataaa gataaggaaa tacgagagaa
+     2521 agatgattta ttaaataaag cagttgagcg tattgaaaac gcagacgata attttaacca
+     2581 actttacgaa aatgcaaagc cacttaaaga gaatatagaa atagcgttaa agcttttaaa
+     2641 aatcttacta aaagagttag aacgagtttt aggaagaaat acctttgcgg aaagagttaa
+     2701 taagttaaca gaagatgaac caaaactaaa tggtttagca ggaaacttag ataaaaaaat
+     2761 gaatccagaa ttatattcag aacaggaaca gcaacaagaa caacaaaaga atcaaaaacg
+     2821 agatagaggt atgcacttat agaacatgca tttatgccga gaaaacttat tggttggaat
+     2881 gggctatgtg ttagctaact tgttagcgag ttggttggac ttgaattggg attaatccca
+     2941 agaaagtacc aactcaacaa cacataaagc cctgtaggtt ccgaccaata aggaaattgg
+     3001 aataaagcaa taaaaggagt tgaagaaatg aaattcagag aagcctttga gaattttata
+     3061 acaagtaagt atgtacttgg tgttttagta gttttaactg tttaccagat aatacaaatg
+     3121 cttaaataaa aaaagacttg atctgattag accaagtctt ttgatagtgt tatattaata
+     3181 acaaaataaa aaggagtcgc tcacgccttg accaaagttt gtgaacgaca tcattcaaag
+     3241 aaaaaaacac tgagttgttt ttataatctt gtatatttag atattaaacg atatttaaat
+     3301 atacatcaag atatatattt gggtgagcga ttccttaaac gaaattgaga ttaaggagtc
+     3361 gattttttat gtataaaaac aatcatgcaa atcattcaaa tcatttggaa aatcacgatt
+     3421 tagacaattt ttctaaaacc ggctactcta atagccggtt ggacgcacat actgtgtgca
+     3481 tatctgatcc aaaattaagt tttgatgcaa tgacgatcgt tggaaatctc aaccgagaca
+     3541 acgctcaagc cctttctaaa tttatgagtg tagagcccca aataagactt tgggatattc
+     3601 ttcaaacaaa gtttaaagct aaagcacttc aagaaaaagt ttatattgaa tatgacaaag
+     3661 tgaaagcaga tagttgggat agacgtaata tgcgtattga atttaatcca aacaaactta
+     3721 cacgagatga aatgatttgg ttaaaacaaa atataataag ctacatggaa gatgacggtt
+     3781 ttacaagatt agatttagcc tttgattttg aagatgattt gagtgactac tatgcaatgt
+     3841 ctgataaagc agttaagaaa actatttttt atggtcgtaa tggtaagcca gaaacaaaat
+     3901 attttggcgt gagagatagt aatagattta ttagaattta taataaaaag caagaacgta
+     3961 aagataatgc agatgctgaa gttatgtctg aacatttatg gcgtgtagaa atcgaactta
+     4021 aaagagatat ggtggattac tggaatgatt gctttagtga tttacatatc ttgcaaccag
+     4081 attggaaaac tatccaacgc actgcggata gagcaatagt ttttatgtta ttgagtgatg
+     4141 aagaagaatg gggaaagctt cacagaaatt ctagaacaaa atataagaat ttgataaaag
+     4201 aaatttcgcc agtcgattta acggacttaa tgaaatcgac tttaaaagcg aacgaaaaac
+     4261 aattgcaaaa acaaatcgat ttttggcaac atgaatttaa attttggaaa tagtgtacat
+     4321 attaatatta ctgaacaaaa atgatatatt taaactattc taatttagga ggattttttt
+     4381 atgaagtgtc tatttaaaaa tttggggaat ttatatgagg tgaaagaata atttacccc
+//
+

@@ -1,0 +1,13 @@
+path_wd <- "/Desktop/Sung_Lab/testdir"
+path_to_scripts <- "/Desktop/Sung_Lab/R_workspace/Context_Project/Context_Pipeline_0.1.0"
+path_output <- "/Desktop/CDMAP/Test_Datasets/output"
+
+Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/VF/chr2/CP000021.fasta"
+Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/VF/chr2/CP000021.gbk"
+Path_InFile <-"/Desktop/CDMAP/Test_Datasets/VF/chr2/WT_chr2_basecalls.csv"
+Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/VF/chr2/CP000021.fasta"
+
+Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/VF/chr2/CP000021.fasta"
+Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/VF/chr2/CP000021.gbk"
+Path_InFile <-"/Desktop/CDMAP/Test_Datasets/VF/chr2/mutant_chr2_basecalls.csv"
+Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/VF/chr2/CP000021.fasta"

@@ -1,0 +1,14 @@
+Context_Pipeline_Basecall:
+
+
+Path_RefFile <- "/Desktop/CDMAP/Test_Datasets/Teredinibacter_turnerae_T7901/CP001614.fasta"
+Path_GBFile <- "/Desktop/CDMAP/Test_Datasets/Teredinibacter_turnerae_T7901/CP001614.gbk"
+Path_InFile <- "/Desktop/CDMAP/Test_Datasets/Teredinibacter_turnerae_T7901/Basecalls.csv"
+Path_Refseq <- "/Desktop/CDMAP/Test_Datasets/Teredinibacter_turnerae_T7901/CP001614.fasta"
+
+Output_DataVerifyReport:
+
+path_output <- “/Desktop/CDMAP/Test_Datasets/output"
+Path_MyLeft <- "/Desktop/CDMAP/Test_Datasets/output/Left_Context_Core_full.csv"
+Path_MyRight <- "/Desktop/CDMAP/Test_Datasets/output/Right_Context_Core_full.csv"
+path_refseq <- "/Desktop/CDMAP/Test_Datasets/"
