@@ -133,11 +133,11 @@ _(User note: these directories will be generated in either the default directori
 
 The objective of generateContextCounts is to generate the context dependent mutation counts for a given chromosome of a single organism. This file parses the MutBaseCalls data frame generated from a stripped down VCF file and then for each mutation generates the following information:
 
-    - Nucleotide Mutation 5-mer frame:
+   - Nucleotide Mutation 5-mer frame:
       - Nucleotide Triplet Mutation Frame: the 3mer comprised of the point mutation, and its left and rightmost nucleotide neighbors.
       - 4-mer Upstream Mutation Frame: the 4mer comprised of the point mutation, and its two left-side, and immediate right-side nucleotide neighbors.
       - 4-mer Downstream Mutation Frame: the 4mer comprised of the point mutation, and its immediate left-side, and two right-side nucleotide neighbors.
-    - Spatiotemporal Mutation Distance:
+   - Spatiotemporal Mutation Distance:
       - Distance in which the point mutation occurred with respect to the ORI and TERM location.
 
 \*\*insert important loops, control structures and variables here\*\*
@@ -160,8 +160,8 @@ The purpose of partitionReplichores is to take the output generated from generat
 
 The following Set of scripts are used to generate the counts of the observed nucleotide triplet, and 4mer frequency of given nucleotide 3mers and 4mers throughout a given chromosome of an organism with respect to its given replichore:
 
-      - **GWTC.R** sequentially calculates each nucleotide triplet (with upstream and downstream nucleotides) on the leading strand (5&#39; to 3&#39;) and increments its corresponding entry into the requisite matrices for calculation in subsequent steps.
-      - **Rev\_GWTC.R** operates in a similar manner to GWTC.r and sequentially counts the observed frequency of nucleotide triplets (with upstream and downstream nucleotides) on the lagging strand (3&#39; to 5&#39;) and increments the corresponding matrices for calculation in subsequent steps.
+- **GWTC.R** sequentially calculates each nucleotide triplet (with upstream and downstream nucleotides) on the leading strand (5&#39; to 3&#39;) and increments its corresponding entry into the requisite matrices for calculation in subsequent steps.
+- **Rev_GWTC.R** operates in a similar manner to GWTC.r and sequentially counts the observed frequency of nucleotide triplets (with upstream and downstream nucleotides) on the lagging strand (3&#39; to 5&#39;) and increments the corresponding matrices for calculation in subsequent steps.
 
 **Matrix Object, Variables &amp; Functions Legend:**
 
