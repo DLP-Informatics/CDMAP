@@ -1,4 +1,4 @@
-![Shape1](RackMultipart20220103-4-1xgefyk_html_54e3a6f388eea821.gif)
+
 
 **CDMAP List of Scripts and Dependencies**
 
