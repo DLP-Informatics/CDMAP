@@ -11,7 +11,7 @@ Contributors: Way Sung (Principal Investigator), Thomas Cardenas, Perrin Mele, J
 The CDMAP (Context Dependent Mutation Analysis Package) is a command line software package written in R for the purpose of analyzing bacterial organisms to classify, characterize, and generate context dependent mutation rates with respect to the replication origin on a per-chromosome, per-replichore basis. CDMAP is comprised of two major components, the SOA (Single Organism Analysis) pipeline that generates and visualizes per-site context dependent mutation rates, but also analyzes rates with respect to various factors such as replication strand, codon usage and nucleotide triplet counts. The other major component is the MOA (Multi-Organism Analysis) pipeline, which indiscriminately analyzes the inter-organism relationships in context mutation rates with respect to biological factors relating to GC content, replication strand bias, upstream/downstream nucleotides and other factors. Both SOA and MOA generate a wealth of csv output and local end-user visualizations for downstream analysis via visualization software such as tableau. If you have any questions feel free to contact with any inquiries. Preprint" https://www.biorxiv.org/content/10.1101/2022.02.03.479067v1.full
 
 &nbsp;
-
+Listed below in this readme are the Parent and Child scripts and a description of major functionalities, dependencies, and variable name flag conventions that are used in order to structure the workflow of the SOA and MOA pipelines contained in the the CDMAP package
 &nbsp;
 
 
