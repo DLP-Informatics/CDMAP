@@ -17,7 +17,9 @@ Listed below in this readme are the Parent and Child scripts and a description o
 &nbsp;
 
 Developers Note:
-In prior work, we have shown that the mutation rates for triplet contexts are asymmetric with respect to the origin of replication (e.g., the central nucleotide of TCA in one replichore has the same mutation rate as the central nucleotide of TGA in the other). The total genome-wide rates use the right replichore and the reverse of the left replichore. Context-specific rates will be more accurate if ORI information is included in the CDMAP run. 
+1) In prior work, we have shown that the mutation rates for triplet contexts are asymmetric with respect to the origin of replication (e.g., the central nucleotide of TCA in one replichore has the same mutation rate as the central nucleotide of TGA in the other). The total genome-wide rates use the right replichore and the reverse of the left replichore. Context-specific rates will be more accurate if ORI information is included in the CDMAP run. 
+
+2) Currently, for optimal use, please fork CDMAP into your operating systems equivalent "Desktop" directory. at this current juncture, CDMAP operates under the premise that it is natively stored in the Desktop folder. Future versions will address a more flexible file storage options.
 
 &nbsp;
 
