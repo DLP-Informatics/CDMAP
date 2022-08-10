@@ -1,10 +1,25 @@
-![Shape1](RackMultipart20220103-4-1xgefyk_html_54e3a6f388eea821.gif)
+
 
 **CDMAP List of Scripts and Dependencies**
 
 Author: David Logan Patton
 
 Contributors: Way Sung (Principal Investigator), Thomas Cardenas, Perrin Mele, John Navarro
+
+**About**
+
+The CDMAP (Context Dependent Mutation Analysis Package) is a command line software package written in R for the purpose of analyzing bacterial organisms to classify, characterize, and generate context dependent mutation rates with respect to the replication origin on a per-chromosome, per-replichore basis. CDMAP is comprised of two major components, the SOA (Single Organism Analysis) pipeline that generates and visualizes per-site context dependent mutation rates, but also analyzes rates with respect to various factors such as replication strand, codon usage and nucleotide triplet counts. The other major component is the MOA (Multi-Organism Analysis) pipeline, which indiscriminately analyzes the inter-organism relationships in context mutation rates with respect to biological factors relating to GC content, replication strand bias, upstream/downstream nucleotides and other factors. Both SOA and MOA generate a wealth of csv output and local end-user visualizations for downstream analysis via visualization software such as tableau. If you have any questions feel free to contact with any inquiries. Preprint" https://www.biorxiv.org/content/10.1101/2022.02.03.479067v1.full
+
+&nbsp;
+
+Listed below in this readme are the Parent and Child scripts and a description of major functionalities, dependencies, and variable name flag conventions that are used in order to structure the workflow of the SOA and MOA pipelines contained in the the CDMAP package
+
+&nbsp;
+
+Developers Note:
+In prior work, we have shown that the mutation rates for triplet contexts are asymmetric with respect to the origin of replication (e.g., the central nucleotide of TCA in one replichore has the same mutation rate as the central nucleotide of TGA in the other). The total genome-wide rates use the right replichore and the reverse of the left replichore. Context-specific rates will be more accurate if ORI information is included in the CDMAP run. 
+
+&nbsp;
 
 **Single Organism Context Analysis (CDMAP-SOA)**
 
@@ -133,11 +148,11 @@ _(User note: these directories will be generated in either the default directori
 
 The objective of generateContextCounts is to generate the context dependent mutation counts for a given chromosome of a single organism. This file parses the MutBaseCalls data frame generated from a stripped down VCF file and then for each mutation generates the following information:
 
-    - Nucleotide Mutation 5-mer frame:
+   - Nucleotide Mutation 5-mer frame:
       - Nucleotide Triplet Mutation Frame: the 3mer comprised of the point mutation, and its left and rightmost nucleotide neighbors.
       - 4-mer Upstream Mutation Frame: the 4mer comprised of the point mutation, and its two left-side, and immediate right-side nucleotide neighbors.
       - 4-mer Downstream Mutation Frame: the 4mer comprised of the point mutation, and its immediate left-side, and two right-side nucleotide neighbors.
-    - Spatiotemporal Mutation Distance:
+   - Spatiotemporal Mutation Distance:
       - Distance in which the point mutation occurred with respect to the ORI and TERM location.
 
 \*\*insert important loops, control structures and variables here\*\*
@@ -160,8 +175,8 @@ The purpose of partitionReplichores is to take the output generated from generat
 
 The following Set of scripts are used to generate the counts of the observed nucleotide triplet, and 4mer frequency of given nucleotide 3mers and 4mers throughout a given chromosome of an organism with respect to its given replichore:
 
-      - **GWTC.R** sequentially calculates each nucleotide triplet (with upstream and downstream nucleotides) on the leading strand (5&#39; to 3&#39;) and increments its corresponding entry into the requisite matrices for calculation in subsequent steps.
-      - **Rev\_GWTC.R** operates in a similar manner to GWTC.r and sequentially counts the observed frequency of nucleotide triplets (with upstream and downstream nucleotides) on the lagging strand (3&#39; to 5&#39;) and increments the corresponding matrices for calculation in subsequent steps.
+- **GWTC.R** sequentially calculates each nucleotide triplet (with upstream and downstream nucleotides) on the leading strand (5&#39; to 3&#39;) and increments its corresponding entry into the requisite matrices for calculation in subsequent steps.
+- **Rev_GWTC.R** operates in a similar manner to GWTC.r and sequentially counts the observed frequency of nucleotide triplets (with upstream and downstream nucleotides) on the lagging strand (3&#39; to 5&#39;) and increments the corresponding matrices for calculation in subsequent steps.
 
 **Matrix Object, Variables &amp; Functions Legend:**
 
