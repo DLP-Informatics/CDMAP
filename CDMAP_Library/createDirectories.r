@@ -16,11 +16,6 @@ if(!(dir.exists(Path_output)))
   dir.create(Path_output) #creates the base level output directory for all organisms
 }
 
-if(!(dir.exists(Path_repoGC)))
-{
-  dir.create(Path_repoGC)
-}
-
 if(!(dir.exists(Path_repoFASTA)))
 {
   dir.create(Path_repoFASTA)
@@ -48,6 +43,11 @@ if(!(dir.exists(Path_output_triplet)))
 if(!(dir.exists(Path_correlate_repo)))
 {
   dir.create(Path_correlate_repo) #creates the base level correlation dump repository for all organisms for 3mer and 4mer
+}
+
+if(!(dir.exists(Path_correlate_repoGC)))
+{
+  dir.create(Path_correlate_repoGC) #creates the base level correlation dump repository for all organisms for 3mer and 4mer
 }
 
 if(!(dir.exists(Path_correlate_triplet)))

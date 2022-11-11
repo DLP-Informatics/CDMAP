@@ -27,6 +27,8 @@ package.check <- lapply(
 BiocManager::install("genbankr")
 library("genbankr") # BiocManager package for genbank file parsing and manipulation
 
+Path_home <- Sys.getenv("HOME")
+
 if(.Platform$OS.type == "unix")
 {
 sysenvvar <- Sys.getenv("HOME")
@@ -36,13 +38,13 @@ MainDir <- paste("/Users/", username, "/Desktop/CDMAP", sep = "")
 LibDir <- paste("/Users/", username, "/Desktop/CDMAP/CDMAP_Library", sep = "")
 }
 
-if(.Platform$OS.type == "windows")
-{
-sysenvvar <- Sys.getenv("HOME")
-homedir <- sysenvvar
-MainDir <- paste( sysenvvar, "\Desktop\CDMAP", sep = "")
-LibDir <- paste(sysenvvar, "\Desktop\CDMAP\CDMAP_Library", sep = "")
-}
+# if(.Platform$OS.type == "windows")
+# {
+# sysenvvar <- Sys.getenv("HOME")
+# homedir <- sysenvvar
+# MainDir <- paste( sysenvvar, "\Desktop\CDMAP", sep = "")
+# LibDir <- paste(sysenvvar, "\Desktop\CDMAP\CDMAP_Library", sep = "")
+# }
 
  if(.Platform$OS.type == "linux")
  {
@@ -72,11 +74,23 @@ DefaultCheck <- c("Default", "default", "Def", "def")
 CustomCheck <- c("Custom", "custom", "Customized", "customized")
 MasterCheck <- c("Triadge", "triadge")
 
-if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
-{
-  setwd(LibDir)
-  source("DirectoryCheck.r")
-}
+Path_MainRepo <- "/Desktop/CDMAP_Output/"
+Path_output <- "/Desktop/CDMAP_Output/Output_Directory"
+Path_output_organism <- paste(Path_output, "/", organism, sep = "")
+Path_correlate_repo <- "/Desktop/CDMAP_Output/Correlation_Repository"
+Path_correlate_repoGC <- "/Desktop/CDMAP_Output/GC_Directory"
+
+#4fold mutation debug directories
+Path_output_organism <- paste(Path_output, "/", organism, "/", sep = "")
+Path_output_triplet <- paste(Path_output_organism, "Triplet", sep = "")
+Path_output_upstream <- paste(Path_output_organism, "Upstream", sep = "")
+Path_output_downstream <- paste(Path_output_organism, "Downstream", sep = "")
+
+Path_correlate_triplet  <- paste(Path_correlate_repo, "triplet", sep = "/")
+Path_correlate_repo_down  <- paste(Path_correlate_repo, "Downstream", sep = "/")
+Path_correlate_repo_up  <- paste(Path_correlate_repo, "Upstream", sep = "/")
+
+
 
 if(any(grepl(DirCheck, MasterCheck, ignore.case = TRUE)))
 {
@@ -88,10 +102,16 @@ if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
 {
   Path_to_scripts <- LibDir
   Path_wd <- MainDir
-  Path_output <- readline("Where do you want to output your data?")
+  #Path_output <- readline("Where do you want to output your data?")
+
+  Path_output <- paste(Path_home, Path_output, sep = "")
+
+  Path_correlate_repo <- paste(Path_home, Path_correlate_repo, sep = "")
+  Path_correlate_repoGC <- paste(Path_home, Path_correlate_repoGC, sep = "")
+  
   Path_RefFile <- readline("What is your reference sequence? (please provide the full Path)")
   Path_GBFile <- readline("What is your Genbank file? (please provide the full Path)")
-  Path_correlate_repo <- readline("Where would you like to store multi-organism output?")
+  #Path_correlate_repo <- readline("Where would you like to store multi-organism output?")
 
   if(any(grepl(VcfOrBaseCall, VCFCheck, ignore.case = TRUE)))
   {
@@ -143,6 +163,18 @@ if(any(grepl(DirCheck, CustomCheck, ignore.case = TRUE)))
   
  }
 
+
+if(any(grepl(DirCheck, DefaultCheck, ignore.case = TRUE)))
+{
+  setwd(LibDir)
+  source("DirectoryCheck.r")
+}
+
+#if(any(grepl(DirCheck, MasterCheck, ignore.case = TRUE)))
+#{
+#  setwd(LibDir)
+#  source("DirectoryCheck.r")
+#}
 
 
 generations <- readline("How many generations did you carry out your experiment? ")
@@ -231,7 +263,7 @@ term_value <- ori_ref$skew[term_pos] #value of the terminii
 term_bp <- term_pos*1000 #base pair position of the terminus of replication
 }
 
-if(manualORI_flag == TRUE)
+if(manualFlagCheck == TRUE)
 {
   ori_pos <- manualORI # find the position of the origin of replication
   ori_bp <- ori_pos*1000   #base pair position of the origin of replication
@@ -599,6 +631,7 @@ CodingRegionPercent <- CodingRegionSize/len_refseq
 CodonGCcontent <- GC_counter/CodingRegionSize
 CodonGCcontent <- CodonGCcontent * 100
 CodonATcontent <- 100 - CodonGCcontent
+setwd(Path_to_scripts)
 source("Config_Dump.R")
 
 
