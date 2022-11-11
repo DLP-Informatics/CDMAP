@@ -38,13 +38,13 @@ MainDir <- paste("/Users/", username, "/Desktop/CDMAP", sep = "")
 LibDir <- paste("/Users/", username, "/Desktop/CDMAP/CDMAP_Library", sep = "")
 }
 
-# if(.Platform$OS.type == "windows")
-# {
-# sysenvvar <- Sys.getenv("HOME")
-# homedir <- sysenvvar
-# MainDir <- paste( sysenvvar, "\Desktop\CDMAP", sep = "")
-# LibDir <- paste(sysenvvar, "\Desktop\CDMAP\CDMAP_Library", sep = "")
-# }
+if(.Platform$OS.type == "windows")
+{
+sysenvvar <- Sys.getenv("HOME")
+homedir <- sysenvvar
+MainDir <- paste( sysenvvar, "\Desktop\CDMAP", sep = "")
+LibDir <- paste(sysenvvar, "\Desktop\CDMAP\CDMAP_Library", sep = "")
+}
 
  if(.Platform$OS.type == "linux")
  {
